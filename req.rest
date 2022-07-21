@@ -1,0 +1,12 @@
+// Intro
+# GET http://localhost:3000/decSocAPI/
+
+
+// Messages
+GET http://localhost:3000/decSocAPI/messages/
+GET http://localhost:3000/decSocAPI/messages/sendMessage
+GET http://localhost:3000/decSocAPI/messages/getMessages
+
+
+//
+
