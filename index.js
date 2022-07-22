@@ -1,9 +1,13 @@
 let express = require('express');
 let app = express();
+let bodyParser = require('body-parser');
 
 //! Routes
+let userRoute = require('./routes/userRoute');
 let messagesRoute = require('./routes/messagesRoute');
 
+//! Middlewear
+app.use(bodyParser.json());
 
 //! Config 
 let port = process.env.PORT || 3000;
@@ -19,8 +23,5 @@ app.listen(port, () => {
 app.get(`${apiRoute}/`, (req, res) => {
     res.send(`Hello from ${appName}`);
 });
-
-
+app.use(`${apiRoute}/user`, userRoute);
 app.use(`${apiRoute}/messages`, messagesRoute);
-
-
