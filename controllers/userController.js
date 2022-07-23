@@ -45,7 +45,8 @@ let login = async (req, res) => {
 
 //! Debug
 let delAllUsers = async (req, res) => {
-    let usersList = [];
+    usersList = [];
+    res.send(usersList);
 };
 
 module.exports = {
