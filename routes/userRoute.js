@@ -8,7 +8,7 @@ Router.post('/signup', userController.signup);
 Router.post('/login', userController.login);
 
 // Debug
-Router.post('/deleteAllUsers', userController.delAllUsers);
+Router.get('/deleteAllUsers', userController.delAllUsers);
 
 
 module.exports = Router;

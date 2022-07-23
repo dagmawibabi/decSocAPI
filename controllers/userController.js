@@ -1,5 +1,5 @@
 //! Global var
-let usersList = [];
+usersList = [];
 
 // Introduction
 let introduction = async (req, res) => {
@@ -45,8 +45,11 @@ let login = async (req, res) => {
 
 //! Debug
 let delAllUsers = async (req, res) => {
+    // usersList = [];
     usersList = [];
-    res.send(usersList);
+    res.setHeader('Content-Type', 'application/json');
+
+    res.send(JSON.stringify(usersList));
 };
 
 module.exports = {

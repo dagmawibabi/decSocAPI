@@ -9,3 +9,4 @@
 
 
 //
+GET http://localhost:3000/decSocAPI/user/deleteAllUsers
