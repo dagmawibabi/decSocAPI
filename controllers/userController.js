@@ -35,6 +35,7 @@ let login = async (req, res) => {
             }
         }
     }
+    res.setHeader('Content-Type', 'application/json');
     if(validUser == true){
         res.send(JSON.stringify({"valid": validUser, "data": usersList}));
     } else {

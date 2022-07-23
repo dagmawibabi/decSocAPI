@@ -9,4 +9,6 @@
 
 
 //
-GET http://localhost:3000/decSocAPI/user/deleteAllUsers
+# GET http://localhost:3000/decSocAPI/user/deleteAllUsers
+
+GET https://dagmawibabi.com/decSocAPI/user/deleteAllUsers
