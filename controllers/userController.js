@@ -15,7 +15,7 @@ let signup = async (req, res) => {
             exists = true;
         }
     }
-    console.log(exists);
+    res.setHeader('Content-Type', 'application/json');
     if(exists == false){
         usersList.push(newUser);
          res.send(JSON.stringify({"valid": !exists, "data": usersList}));
