@@ -45,11 +45,16 @@ let login = async (req, res) => {
 
 let updateUserList = async (req, res) => {
     receivedProfile = req.body;
+    let found = false;
     if(usersList.length > 0){
         for(let i in usersList){
             if(usersList[i]['username'] == receivedProfile['username']){
                 usersList[i] = receivedProfile;
+                found = true;
             }
+        }
+        if(found == false){
+            usersList.push(receivedProfile);
         }
     } else {
         usersList.push(receivedProfile);
