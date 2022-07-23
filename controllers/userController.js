@@ -43,6 +43,16 @@ let login = async (req, res) => {
     }
 }
 
+let updateUserList = async (req, res) => {
+    receivedProfile = req.body;
+    for(let i in usersList){
+        if(usersList[i]['username'] == receivedProfile['username']){
+            usersList[i] = receivedProfile;
+        }
+    }
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify(usersList));
+}
 
 //! Debug
 let delAllUsers = async (req, res) => {
@@ -58,5 +68,6 @@ module.exports = {
     signup,
     login,
     usersList,
+    updateUserList,
     delAllUsers
 }

@@ -10,5 +10,8 @@
 
 //
 # GET http://localhost:3000/decSocAPI/user/deleteAllUsers
+GET http://localhost:3000/decSocAPI/user/updateUserList
 
-GET https://dagmawibabi.com/decSocAPI/user/deleteAllUsers
+
+// Debug
+# GET https://dagmawibabi.com/decSocAPI/user/deleteAllUsers
