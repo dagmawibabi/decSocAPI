@@ -7,4 +7,8 @@ Router.get('/', userController.introduction);
 Router.post('/signup', userController.signup);
 Router.post('/login', userController.login);
 
+// Debug
+Router.post('/deleteAllUsers', userController.delAllUsers);
+
+
 module.exports = Router;

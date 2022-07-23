@@ -42,9 +42,16 @@ let login = async (req, res) => {
     }
 }
 
+
+//! Debug
+let delAllUsers = async (req, res) => {
+    let usersList = [];
+};
+
 module.exports = {
     introduction,
     signup,
     login,
     usersList,
+    delAllUsers
 }
