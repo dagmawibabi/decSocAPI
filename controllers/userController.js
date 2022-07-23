@@ -45,10 +45,14 @@ let login = async (req, res) => {
 
 let updateUserList = async (req, res) => {
     receivedProfile = req.body;
-    for(let i in usersList){
-        if(usersList[i]['username'] == receivedProfile['username']){
-            usersList[i] = receivedProfile;
+    if(usersList.length > 0){
+        for(let i in usersList){
+            if(usersList[i]['username'] == receivedProfile['username']){
+                usersList[i] = receivedProfile;
+            }
         }
+    } else {
+        usersList.push(receivedProfile);
     }
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify(usersList));
