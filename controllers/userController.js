@@ -44,7 +44,7 @@ let login = async (req, res) => {
 }
 
 let updateUserList = async (req, res) => {
-    receivedProfile = req.body;
+    let receivedProfile = req.body;
     let found = false;
     if(usersList.length > 0){
         for(let i in usersList){

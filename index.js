@@ -21,7 +21,7 @@ app.use(
 //! Config 
 let port = process.env.PORT || 3000;
 let appName = process.env.APP_NAME || 'DecSoc API';
-let apiRoute = process.env.API_ROUTE || '/decSocAPI';
+let apiRoute = process.env.API_ROUTE || '/dsapp';
 
 //! Server 
 app.listen(port, () => {
