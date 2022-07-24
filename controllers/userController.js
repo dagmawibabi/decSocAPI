@@ -60,7 +60,7 @@ let updateUserList = async (req, res) => {
         usersList.push(receivedProfile);
     }
     res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify(usersList));
+    res.send(JSON.stringify({"data": usersList}));
 }
 
 //! Debug
