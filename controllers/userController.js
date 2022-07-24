@@ -1,5 +1,5 @@
 //! Global var
-usersList = [];
+let usersList = [];
 
 // Introduction
 let introduction = async (req, res) => {
