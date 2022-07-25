@@ -8,19 +8,19 @@ let introduction = async (req, res) => {
 
 // Sign Up
 let signup = async (req, res) => {
-    let newUserX = req.body;
-    let newUser = {
-        "fullname": req.body.fullname,
-        "username": req.body.username,
-        "password": req.body.password,
-        "bio": req.body.bio,
-        "numOfPosts": req.body.numOfPosts,
-        "numOfFollowers": req.body.numOfFollowers,
-        "numOfFollowing": req.body.numOfFollowing,
-        "followers": req.body.followers,
-        "following": req.body.following,
-        "creationDate": req.body.creationDate,  
-    }
+    let newUser = req.body;
+    // let newUser = {
+    //     "fullname": req.body.fullname,
+    //     "username": req.body.username,
+    //     "password": req.body.password,
+    //     "bio": req.body.bio,
+    //     "numOfPosts": req.body.numOfPosts,
+    //     "numOfFollowers": req.body.numOfFollowers,
+    //     "numOfFollowing": req.body.numOfFollowing,
+    //     "followers": req.body.followers,
+    //     "following": req.body.following,
+    //     "creationDate": req.body.creationDate,  
+    // }
     let exists = false;
     for (let i of usersList){
         if(i['username'] == newUser['username']){
